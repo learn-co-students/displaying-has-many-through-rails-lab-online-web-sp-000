@@ -3,8 +3,9 @@
 
 <% @appointments.each do |appt| %>
 
-<% doctor = Doctor.find(appt[:doctor_id]) %>
-<%= link_to doctor.name, doctor_path(doctor) %>
-<%= link_to appt, appointment_path(appt) %>
+  <% doctor = Doctor.find(appt[:doctor_id]) %>
+  <%= link_to doctor.name, doctor_path(doctor) %>
+  <%= link_to appt, appointment_path(appt) %>
+  <%= appt.appointment_datetime.strftime("%B %e, %Y at %H:%M") %>
 
 <% end %>
