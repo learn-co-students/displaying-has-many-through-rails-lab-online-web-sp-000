@@ -9,7 +9,6 @@ describe 'Appointment' do
   end
 
   it 'has a date and time' do
-    binding.pry
     expect(@appointment.appointment_datetime.strftime('%B %d, %Y')).to eq('December 25, 2016')
   end
 
