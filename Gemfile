@@ -45,4 +45,6 @@ group :development, :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'pry'
+  gem 'pry-nav'
+  gem 'pry-rails'
 end
