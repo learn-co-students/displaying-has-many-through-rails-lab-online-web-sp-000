@@ -1,0 +1,7 @@
+<ul>
+<% @patient.get_appt.each do |appt| %>
+  <li><%= appt[:time] %></li>
+  <%= link_to appt[:doctor].name, doctor_path(appt[:doctor]) %>
+<% end %>
+</ul>
+
