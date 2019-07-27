@@ -1,0 +1,13 @@
+<h1>Appointment Information</h1>
+<table>
+    <tr>
+        <th>Doctor</th>
+        <th>Patient</th>
+        <th>Time</th>
+    </tr>
+    <tr>
+        <td> <%= link_to @appointment.doctor_name, doctor_path(@appointment.doctor) %> </td>
+        <td> <%= link_to @appointment.patient_name, patient_path(@appointment.patient) %></td>
+        <td></td>
+    </tr>
+</table>
