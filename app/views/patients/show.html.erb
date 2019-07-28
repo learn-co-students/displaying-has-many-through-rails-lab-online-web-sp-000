@@ -1,0 +1,5 @@
+<ul>
+    <% @patient.appointments.each do |appointment| %>
+        <li><%= appointment.readable_appointment_time %></li>
+    <% end %>
+</ul>
