@@ -4,6 +4,10 @@ class AppointmentsController < ApplicationController
     def show
     end
 
+    def index
+        raise ActionController::RoutingError, 'Not Found'
+    end
+
     private
 
     def set_appointment
