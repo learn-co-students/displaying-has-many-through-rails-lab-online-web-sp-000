@@ -1,0 +1,6 @@
+
+<h1>Welcome To the Ward</h1>
+<marquee> 👨🏿‍⚕️ 👩🏿‍⚕️ 📊 </marquee>
+<% @doctors.each do |d|  %>
+ <li><%= link_to d.name, doctor_path(d) %> </li>
+<% end%>
