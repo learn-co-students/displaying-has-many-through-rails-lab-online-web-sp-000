@@ -8,7 +8,7 @@
   <% @doctor.appointments.each do |appointment| %>
   <tr>
     <td><%= link_to appointment.patient.name, patient_path(appointment.patient) %></td>
-    <td><%= appointment.appointment_datetime.strftime("%B %d, %C%y at %H:%M") %></td>
+    <td><%= appointment.appointment_time %></td>
   </tr>
   <% end %>
 </table>
