@@ -1,4 +1,4 @@
-class AppointmentsController < ApplicationRecord
+class AppointmentsController < ApplicationController
 
   def show
     @appointment = Appointment.find(params[:id])

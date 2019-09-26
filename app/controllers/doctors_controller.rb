@@ -5,6 +5,6 @@ class DoctorsController < ApplicationController
   end
 
   def index
-    @doctors = Doctors.all
+    @doctors = Doctor.all
   end
 end
