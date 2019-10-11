@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191011133704) do
+ActiveRecord::Schema.define(version: 20191011135730) do
 
   create_table "appointments", force: :cascade do |t|
-    t.string  "time"
-    t.integer "doctor_id"
-    t.integer "patient_id"
+    t.datetime "appointment_datetime"
+    t.integer  "doctor_id"
+    t.integer  "patient_id"
   end
 
   create_table "doctors", force: :cascade do |t|
@@ -24,7 +24,8 @@ ActiveRecord::Schema.define(version: 20191011133704) do
   end
 
   create_table "patients", force: :cascade do |t|
-    t.string "name"
+    t.string  "name"
+    t.integer "age"
   end
 
 end
