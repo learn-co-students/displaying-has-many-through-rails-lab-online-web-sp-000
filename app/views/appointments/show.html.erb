@@ -1,0 +1,5 @@
+<h3><%= @appointment.appointment_datetime %></h3>
+<%= @appointment.doctor.each do |app_doctor| %>
+    <%= link_to app_doctor(app_doctor) %>
+<% end%>
+   
