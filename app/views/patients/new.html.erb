@@ -1,0 +1,22 @@
+<h1>Patient#New</h1>
+
+<%= form_for @patient do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field %><br>
+  <br>
+
+  <%= f.fields_for :doctor do |doctor| %>
+    <%= doctor.label :name %>
+    <%= doctor.text_field :name %>
+    <%= doctor.label :department %>
+    <%= doctor.text_field :department %><br>
+  <% end %>
+  <br>
+
+  <%= f.fields_for :appointments do |appt| %>
+    <%= appt.label :appointment_datetime %>
+    <%= appt.text_field %><br>
+  <% end %>
+
+  <%= f.submit %>
+<% end %>

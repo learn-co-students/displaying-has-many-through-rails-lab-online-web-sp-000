@@ -1,0 +1,12 @@
+<h1>Appointments#Show</h1>
+
+<h3>appointment <%= @appointment.id %></h3>
+
+<h2>date and time:</h2>
+
+<%= @appointment.appointment_datetime.split('T')[0] %>
+
+<h3>Doctor: <%= link_to @appointment.doctor.name, doctor_path(@appointment.doctor) %></h3>
+<h4>Department: <%= @appointment.doctor.department %></h4>
+
+<h3>patient: <%= link_to @appointment.patient.name, patient_path(@appointment.patient) %></h3>
