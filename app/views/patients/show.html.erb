@@ -1,4 +1,11 @@
 <h1>Patient#Show</h1>
 
-<h2><%= link_to @patient.name, patient_path(@patient) %></h2>
-<h4>id: <%= @patient.id %></h4>
+<h2><%= @patient.name %></h2>
+
+<h3>appointments:</h3>
+
+<ul>
+  <%= @patient.appointments.each do |appt| %>
+    <li><%= appt.appointment_datetime %></li>
+    <% end %>
+</ul>

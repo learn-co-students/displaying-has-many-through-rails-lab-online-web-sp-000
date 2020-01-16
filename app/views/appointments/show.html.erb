@@ -2,11 +2,19 @@
 
 <h3>appointment <%= @appointment.id %></h3>
 
-<h2>date and time:</h2>
-
-<%= @appointment.appointment_datetime.split('T')[0] %>
+<% date = @appointment.appointment_datetime.split('T')[0] %>
+<% date = Date.parse(date).strftime('%B %d, %Y') %>
+<% time = @appointment.appointment_datetime.split('T')[1] %>
+<% time = Time.parse(time).strftime('%H:%M') %>
+<h3>date and time: <%= date %> at <%= time %></h3>
 
 <h3>Doctor: <%= link_to @appointment.doctor.name, doctor_path(@appointment.doctor) %></h3>
 <h4>Department: <%= @appointment.doctor.department %></h4>
 
 <h3>patient: <%= link_to @appointment.patient.name, patient_path(@appointment.patient) %></h3>
+
+
+# @date = @appointment.appointment_datetime.split('T')[0]
+# @date = Date.parse(@date).strftime('%B %d, %Y')
+# @time = @appointment.appointment_datetime.split('T')[1]
+# @time = Time.parse(@time).strftime('%H:%M')
