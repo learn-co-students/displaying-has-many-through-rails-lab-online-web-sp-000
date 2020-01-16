@@ -1,11 +1,21 @@
 <h1>Patient#Show</h1>
 
 <h2><%= @patient.name %></h2>
+<h2>Age: <%= @patient.age %></h2>
 
-<h3>appointments:</h3>
+<% @patient.appointments.each do |appt| %>
+  <p>
+    <% date = appt.appointment_datetime.split('T')[0] %>
+    <% date = Date.parse(date).strftime('%B %d, %Y') %>
+    <% time = appt.appointment_datetime.split('T')[1] %>
+    <% time = Time.parse(time).strftime('%H:%M') %>
+    <%= date %> at <%= time %> <%= link_to appt.doctor.name, patient_path(appt.patient) %>
+  </p>
+<% end %>
 
-<ul>
-  <%= @patient.appointments.each do |appt| %>
-    <li><%= appt.appointment_datetime %></li>
-    <% end %>
-</ul>
+
+
+# @date = @appointment.appointment_datetime.split('T')[0]
+# @date = Date.parse(@date).strftime('%B %d, %Y')
+# @time = @appointment.appointment_datetime.split('T')[1]
+# @time = Time.parse(@time).strftime('%H:
