@@ -5,5 +5,6 @@ class Appointment < ApplicationRecord
   # WORKS!!!  DO NOT TOUCH!!!!!!!
   def appt_datetime
     appointment_datetime.try(:strftime, '%B %d, %Y at %H:%M')
+
   end
 end
