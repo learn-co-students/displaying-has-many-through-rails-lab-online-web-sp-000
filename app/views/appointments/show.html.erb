@@ -1,14 +1,8 @@
 <h1>Appointment#Show</h1>
 
-<p>doctor: <%= @appointment.doctor.name %></p>
+<p>doctor: <%= link_to @appointment.doctor.name, doctor_path(@appointment.doctor) %></p>
+
 <p>patient: <%= link_to @appointment.patient.name, patient_path(@appointment.patient) %></p>
-    <% date = Date.parse(date).strftime('%B %d, %Y') %>
-    <% time = @appointment.appointment_datetime.split('T')[1] %>
-    <% time = Time.parse(time).strftime('%H:%M') %>
-    <%= date %> at <%= time %> <%= link_to @appointment.doctor.name, doctor_path(@appointment.doctor) %>
 
-
-# @date = @appointment.appointment_datetime.split('T')[0]
-# @date = Date.parse(@date).strftime('%B %d, %Y')
-# @time = @appointment.appointment_datetime.split('T')[1]
-# @time = Time.parse(@time).strftime('%H:@time).strftime('%H:%M')
+<p><%= @appointment.appt_datetime %></p>
+<p><%= @appointment.appointment_datetime %></p>

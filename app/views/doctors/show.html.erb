@@ -5,16 +5,7 @@
 
 <% @doctor.appointments.each do |appt| %>
   <p>
-    <% date = appt.appointment_datetime.split('T')[0] %>
-    <% date = Date.parse(date).strftime('%B %d, %Y') %>
-    <% time = appt.appointment_datetime.split('T')[1] %>
-    <% time = Time.parse(time).strftime('%H:%M') %>
-    <%= date %> at <%= time %> <%= link_to appt.patient.name, patient_path(appt.patient) %>
+    <%= appt.appt_datetime %> patient: <%= link_to appt.patient.name, patient_path(appt.patient) %>
   </p>
 <% end %>
-
-
-# @date = @appointment.appointment_datetime.split('T')[0]
-# @date = Date.parse(@date).strftime('%B %d, %Y')
-# @time = @appointment.appointment_datetime.split('T')[1]
-# @time = Time.parse(@time).strftime('%H:%M')
+<p><%= @appointment.appointment_datetime.strftime('%B %d, %Y at %H:%M')%></p>
