@@ -9,7 +9,7 @@
     <% date = Date.parse(date).strftime('%B %d, %Y') %>
     <% time = appt.appointment_datetime.split('T')[1] %>
     <% time = Time.parse(time).strftime('%H:%M') %>
-    <%= date %> at <%= time %> <%= link_to appt.doctor.name, patient_path(appt.patient) %>
+    <%= date %> at <%= time %> <%= link_to appt.doctor.name, doctor_path(appt.doctor) %>
   </p>
 <% end %>
 
