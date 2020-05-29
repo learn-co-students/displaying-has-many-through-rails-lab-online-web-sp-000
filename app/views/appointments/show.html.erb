@@ -1,0 +1,11 @@
+Time: <%= @appointment.convert_time %> <br>
+
+Patient: <%= link_to @appointment.patient.name, patient_path(@appointment.patient.id) %> <br>
+
+Doctor: <%= link_to @appointment.doctor.name, doctor_path(@appointment.doctor.id) %> <br>
+
+
+
+
+<%#= Create an Appointment#show page that shows the date, time, patient,and doctor for that
+particular appointment. %>
