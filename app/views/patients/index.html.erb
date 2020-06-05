@@ -1,0 +1,6 @@
+<ul>
+    <% @patients.each do |patient| %>
+        <li><label>Name: </label><%=patient.name %>
+        <label>Number of Appointments: </label><%= pluralize(patient.appointments.count, 'appointment')%></li>
+    <% end %>
+</ul>
