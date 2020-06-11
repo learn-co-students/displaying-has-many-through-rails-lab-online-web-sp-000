@@ -1,0 +1,8 @@
+<h1>Patient Information</h1>
+<h3>Name: <%= @patient.name %>
+<h3>Appointments:</h3>
+<ul>
+    <%= @patient.appointments.each do |appt| %>
+        <li><%= appt.appointment_datetime.to_s(:long_informal) %> - <%= link_to appt.doctor.name, doctor_path(appt.doctor) %></li>
+    <% end %>
+</ul>
