@@ -1,0 +1,8 @@
+<h3>Patient Show Page</h3>
+<ul>
+<% @patient.appointments.each_with_index do |patient_appointment, index| %>
+   <li>Appointment Number #<%= index %>: 
+   <%= patient_appointment.appointment_datetime.strftime("%B %d, %Y at %H:%M") %></li>
+   <li>Doctor: <%= link_to patient_appointment.doctor.name, doctor_path(patient_appointment.doctor) %></li>
+<% end %>
+</ul>

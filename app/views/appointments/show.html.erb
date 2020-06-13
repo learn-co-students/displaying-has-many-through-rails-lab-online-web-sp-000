@@ -1,4 +1,4 @@
 <h3>Appointment Show Page</h3>
 <%= link_to @appointment.doctor.name, doctor_path(@appointment.doctor) %>
 <%= link_to @appointment.patient.name, patient_path(@appointment.patient) %>
-<%= @appointment.appointment_datetime.to_formatted_s(:long_original) %>
+<%= @appointment.appointment_datetime.strftime("%H:%M %B %d, %Y") %>
