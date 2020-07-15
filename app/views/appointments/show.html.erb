@@ -1,0 +1,7 @@
+<h1>Appointment Info:</h1>
+
+<ul>
+    <li><h4>Time: <%= @appointment.schedule %></h4></li>
+    <li><h4>Patient: <%= link_to @appointment.patient.name, patient_path(@appointment.patient) %></h4></li>
+    <li><h4>Doctor: <%= link_to @appointment.doctor.name, doctor_path(@appointment.doctor) %></h4></li>
+</ul>
