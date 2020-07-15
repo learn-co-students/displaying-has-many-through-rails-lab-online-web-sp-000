@@ -1,0 +1,7 @@
+<h2><%= @doctor.name %></h2>
+Department: <%= @doctor.department %>
+
+<h3>Appointments:</h3>
+<ol><% @doctor.appointments.each do |apt| %>
+    <li><%= link_to apt.patient_name, patient_path(apt.patient) %></li> at <%= apt.formatted_datetime %>
+<% end %></ol>
