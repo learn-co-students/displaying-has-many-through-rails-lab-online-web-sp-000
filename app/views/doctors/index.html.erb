@@ -1,0 +1,12 @@
+<h1>Here's all the friendly doctors!<h1>
+<h3>
+<ul>
+  <% @doctors.each do |doc| %>
+  <li>
+  <%= doc.name %><br>
+  <%= link_to "Doctor Profile", doctor_path(doc) %><br>
+  <%= pluralize(doc.patients.count, 'patient') %><br>
+  </li>
+  <% end %>
+</ul>
+</h3>
