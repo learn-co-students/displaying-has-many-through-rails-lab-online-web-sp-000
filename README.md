@@ -6,7 +6,7 @@
 2. Query for associations via the belongs_to, has_many, and has_many through associations.
 3. Iterate over associations in a view and display associated data for a primary instance.
 4. Identify the join model in a has many through.
-
+#rails g resource Appointment appointment_datetime:datetime --no-test-framework
 ## Overview
 
 The poor doctors at Seattle Grace Hospital are so overworked that they're having trouble keeping track of their patients' appointments! Let's help them (and practice our associations) by building some associations and displaying the data.
