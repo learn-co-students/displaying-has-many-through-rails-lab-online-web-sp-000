@@ -1,0 +1,10 @@
+<h1>Doctors#Index</h1>
+
+<ul>
+  <%= @doctors.each do |doctor| %>
+    <li><%= link_to doctor.name, doctor_path(doctor)%></li>
+    <li><%= doctor.department %></li>
+    <li>id: <%= doctor.id %></li>
+    <br>
+  <% end %>
+</ul>
