@@ -40,7 +40,7 @@ describe "patients", type:  :feature do
         expect(page).to have_content("Name: Bart Simpson Number of Appointments: 1")
       end
     end
-  end
+  en
 
   describe "#show page" do
     it "shows all of a patient's appointment times in a human readable format" do
