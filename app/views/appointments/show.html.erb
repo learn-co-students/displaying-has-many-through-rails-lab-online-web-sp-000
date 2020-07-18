@@ -1,0 +1,6 @@
+<ul>
+  <li>
+    <%= link_to " #{@appointment.doctor.name}", doctor_path(@appointment.doctor) %>
+    <%= link_to " #{@appointment.patient.name} #{@appointment.appointment_datetime.strftime("%B %e, %Y") + " at " + @appointment.appointment_datetime.strftime("%H:%M")}", patient_path(@appointment.patient) %>
+  </li>
+</ul>

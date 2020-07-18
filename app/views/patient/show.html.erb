@@ -1,9 +1,0 @@
-<h2><%= @patient.name %></h2>
-<p>
-  Doctor: <%= @patient.doctor %>
-</p>
-Appointment:
-<% @patient.appointment_time.each do |comment| %>
-<%= link_to comment.user.username, user_path(comment.user) %> said
-<%= comment.content %>
-<% end %>
