@@ -1,2 +1,24 @@
 class PatientsController < ApplicationController
+
+    def new
+        @patient = Patient.new
+    end
+
+    def show(patient_params)
+        @patient = Patient.find(patient_params)
+    end
+
+    def create    
+        Patient.create(patient_params)
+        redirect_to patient_path
+    end
+    
+    def index
+        @patient = Patient.all
+    end
+
+    private
+        def patient_params
+            params.require(:patient).permit(:name, :age, appointments: [])
+        end
 end
