@@ -1,0 +1,12 @@
+<h1>Appointment Details</h1>
+
+<h3>Date & Time</h3>
+<p><%= @appt.formatted_date_time %></p>
+
+<h3>Patient</h3>
+<p><%= link_to @patient.name, patient_path(@patient) %></p>
+
+<h3>Doctor</h3>
+<p><%= link_to @doctor.name, doctor_path(@doctor) %></p>
+
+
