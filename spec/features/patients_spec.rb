@@ -55,3 +55,5 @@ describe "patients", type:  :feature do
   end
 
 end
+
+
