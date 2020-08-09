@@ -1,0 +1,9 @@
+<h1>Doctor <#<%= @doctor.id %>>: <%=@doctor.name%></h1>
+
+
+<p>Department <%= @doctor.department %></p>
+Appointments:
+  <% @doctor.appointments.each do |appt| %>
+    <% binding.pry %>
+    <%= link_to appt.patient.name, appointment_path(appt.id) %>%>
+  <% end %>
