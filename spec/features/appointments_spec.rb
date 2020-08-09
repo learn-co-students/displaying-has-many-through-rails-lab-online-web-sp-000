@@ -27,3 +27,4 @@ describe "appointments", type:  :feature do
     expect {visit('/appointments')}.to raise_error(ActionController::RoutingError)
   end
 end
+
