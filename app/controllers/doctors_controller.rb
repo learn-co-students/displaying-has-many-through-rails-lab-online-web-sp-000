@@ -13,8 +13,8 @@ class DoctorsController < ApplicationController
         @doctor = Doctor.all
     end
     
-    def show(doctor_params)
-        @doctor = Doctor.find(doctor_params)
+    def show
+        @doctor = Doctor.find(params[:id])
     end
 
     private

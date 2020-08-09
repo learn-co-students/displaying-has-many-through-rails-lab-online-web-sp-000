@@ -1,2 +1,8 @@
-<h1>Appointment info:<%= @appointment.appointment_datetime %></h1>
-<%= binding.pry %>
+<h1>Appointment <#<%= @appointment.id %>></h1>
+<h2>Date: <%= @d.strftime("%B %d, %Y") %> at <%= @d.time %></h2> 
+
+
+<h3>Doctor: <%= link_to @doctor.name, doctor_path(@doctor) %></h3>
+
+<p>Department <%= @doctor.department %></p>
+<h3>Patient: <%= link_to @patient.name, patient_path(@patient) %></h3>
