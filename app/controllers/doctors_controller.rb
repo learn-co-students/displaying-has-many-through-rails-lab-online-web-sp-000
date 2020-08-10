@@ -1,23 +1,18 @@
 class DoctorsController < ApplicationController
-    def index 
-    end
+  before_action :set_doctor, only: [:show]
 
-    def create
-    end
+  def index
+    @doctors = Doctor.all
+  end
 
-    def new
-    end
+  def show
+  end
 
-    def edit
-    end
-
-    def show
-    end
-
-    def update
-    end
-
-    def destroy
-    end
+  private
+  def set_doctor
+    @doctor = Doctor.find(params[:id])
+  end
+  def doctor_params
+    params.require(:doctor).permit(:name, :department)
+  end
 end
-
