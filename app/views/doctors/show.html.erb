@@ -4,7 +4,6 @@
 <p>Department: <%= @doctor.department %></p>
 <h2>Appointments:</h2>
   <% @doctor.appointments.each do |appt| %>
-    <% binding.pry %>
     <% @a = appt.appointment_datetime %>
     <%= link_to appt.patient.name, patient_path(appt.id) %>
     <p>Scheduled for: <%= @a.strftime("%B %d, %Y") %> at <%= @a.strftime("%R") %></p>
