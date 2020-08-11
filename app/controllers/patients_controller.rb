@@ -13,8 +13,8 @@ class PatientsController < ApplicationController
         @patient = Patient.all
     end
 
-    def show(patient_params)
-        @patient = Patient.find(patient_params)
+    def show
+        @patient = Patient.find(params[:id])
     end
 
     private

@@ -1,9 +1,11 @@
 <h1>Doctor <#<%= @doctor.id %>>: <%=@doctor.name%></h1>
 
 
-<p>Department <%= @doctor.department %></p>
-Appointments:
+<p>Department: <%= @doctor.department %></p>
+<h2>Appointments:</h2>
   <% @doctor.appointments.each do |appt| %>
     <% binding.pry %>
-    <%= link_to appt.patient.name, appointment_path(appt.id) %>%>
+    <% @a = appt.appointment_datetime %>
+    <%= link_to appt.patient.name, patient_path(appt.id) %>
+    <p>Scheduled for: <%= @a.strftime("%B %d, %Y") %> at <%= @a.strftime("%R") %></p>
   <% end %>
