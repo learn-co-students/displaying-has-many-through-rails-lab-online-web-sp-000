@@ -1,0 +1,9 @@
+<h1>Patient's Profile</h1>
+<h2><%= @patient.name %>'s Appointment</h2>
+
+<% @patient.appointments.map do |appointment| %>
+    <label>Date & Time: </label><%= appointment.appointment_datetime.strftime("%B %d, %Y at %H:%M") %>
+    <br>
+    <label>Doctor: </label><%= link_to appointment.doctor_name, doctor_path(appointment.doctor) %>
+    <br><br>
+<% end %>
