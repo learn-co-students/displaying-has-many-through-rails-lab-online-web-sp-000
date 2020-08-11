@@ -1,0 +1,10 @@
+<h1> List of All Patients </h1>
+
+<ul>
+<% @patients.map do |patient| %>
+    <label>Name: </label><%= link_to patient.name, patient_path(patient) %>
+    <label>Number of Appointments: </label><%= patient.appointments.size %>
+    <br><br>
+<% end %>
+</ul>
+
