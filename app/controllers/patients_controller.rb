@@ -10,7 +10,7 @@ class PatientsController < ApplicationController
     end
     
     def index
-        @patient = Patient.all
+        @patients = Patient.all
     end
 
     def show
