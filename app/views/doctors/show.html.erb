@@ -1,0 +1,8 @@
+<h1>Doctors#show</h1>
+	<% #binding.pry %>
+		<% @doc.appointments.each do |appointment| %>
+		<div>
+		<%= appointment.appointment_datetime.strftime("%B %d, %Y at %k:%M") %>
+		<div><%= link_to appointment.patient.name, patient_path(appointment.patient) %></div>
+		</div>
+<% end %>
