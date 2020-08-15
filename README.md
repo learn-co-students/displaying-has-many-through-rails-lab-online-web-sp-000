@@ -23,6 +23,8 @@ You'll need to create all of the migrations, models, controllers, and views for 
 
 ***Additional note about routes and generators***: We've written the routes for you in the `config/routes.rb` file, so be sure to use the `--skip-routes` flag. This prevents the Rails generators from adding any unnecessary routes. You can use however many flags you need in the generators, so something like `rails g model Post title:string content:text --no-test-framework --skip-routes` is perfectly valid. (If you want to see what other flags and options are available, you can run commands such as `rails g --help` and `rails g model --help`.)
 
+rails g model Appointment datetime:appointment_datetime belongs_to:user belongs_to:doctor --no-test-framework --skip-routes
+
 1. Create migrations and models for doctor, patient, and appointment. Because this is for a hospital, a doctor can have many patients, but a patient can also have many doctors. Patients and doctors both have many appointments. Our `appointments` table should have a column called `appointment_datetime` to represent the date and time the appointment will take place. (When you display this datetime, make sure it's in a human readable format. The tests will be expecting "January 12, 2016 at 3:00".)
 
 2. Create a `Doctor#show` page that displays the doctor's name, department, and appointments, with each appointment's date, time, and patient name (linking to the patient's show page).
