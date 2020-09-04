@@ -1,0 +1,4 @@
+<% @doctor.appointments.map do |d|  %>
+<%= d.appointment_datetime.strftime("%B %d, %Y at %k:%M") %>
+<%= link_to d.patient.name, patient_path(d.patient) %>
+<% end %>
