@@ -1,0 +1,4 @@
+<%= @obj.name %><br>
+<% @obj.appointments.each do |v| %>
+    <%= link_to v.doctor.name, doctor_path(v.doctor)  %> - <%= v.humantime %><br>
+<% end %>

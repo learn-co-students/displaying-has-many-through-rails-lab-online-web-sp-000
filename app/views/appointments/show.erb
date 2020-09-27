@@ -1,0 +1,5 @@
+<%
+t = @obj.appointment_datetime.to_datetime
+t = "#{Date::MONTHNAMES[t.month]} #{t.day}, #{t.year} at #{t.strftime("%k:%M")}"
+%>
+<%= link_to @obj.doctor.name, doctor_path(@obj)  %> - <%= link_to @obj.patient.name, patient_path(@obj)  %> - <%= t %><br>
