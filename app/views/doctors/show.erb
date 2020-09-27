@@ -1,0 +1,9 @@
+<%= @obj.name %><br>
+<%= @obj.department %><br>
+<% @obj.appointments.each do |v| %>
+    <%
+    t = v.appointment_datetime.to_datetime
+    t = "#{Date::MONTHNAMES[t.month]} #{t.day}, #{t.year} at #{t.strftime("%k:%M")}"
+    %>
+    <%= link_to v.patient.name, patient_path(v.patient)  %> - <%= t %><br>
+<% end %>
