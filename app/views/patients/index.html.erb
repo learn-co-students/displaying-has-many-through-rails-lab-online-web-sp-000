@@ -1,0 +1,8 @@
+  
+<h1> Patients</h1>
+<%# page that displays a link to each patient's show page and the total number of appointments they have. %>
+<ul>
+    <%= @patients.each do |p| %>
+    <li>Name: <%= link_to p.name, patient_path(p)%> Number of Appointments: <%= p.appointments.count %></li><br><br>
+    <% end %>
+</ul>
