@@ -1,0 +1,9 @@
+<%=@patient.name%>
+<%=@patient.appointments.each do |app| %>
+    <%@new = @patient.doctors.find(app.doctor_id)%>
+    <!--since we are searching for doctor, we are saying this:
+    from this patient.all of the doctors.find the one(whose id corresponds to this very app)
+     -->
+    <%=link_to @new.name, doctor_path(@new)%>
+    <%= link_to app.appointment_datetime.strftime("%B %d, %Y at %k:%M"), appointment_path(app) %>
+<%end%>
