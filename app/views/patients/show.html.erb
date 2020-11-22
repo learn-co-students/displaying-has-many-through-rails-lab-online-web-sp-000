@@ -1,2 +1,5 @@
-<% binding.pry %>
-<%= @patient %>
+
+<% @patients.all.each do |patient| %>
+    <%= link_to patient, patient_path(patient)%>
+        <%= patient.appointment.count %>
+<% end %>
