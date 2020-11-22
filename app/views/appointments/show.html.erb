@@ -1,0 +1,9 @@
+
+
+<%= link_to @appointment.patient.name, patient_path(@appointment.patient_id) %>
+
+
+
+<%= link_to @appointment.doctor_name, doctor_path(@appointment.doctor_id) %>
+
+<%= link_to @appointment.appointment_datetime.strftime("%B  %d, %Y at approximately %H:%M ") %>
