@@ -1,0 +1,1 @@
+<p><%= link_to @appointment.patient.name, patient_path(@appointment.patient) %> has an appointment with <%= link_to @appointment.doctor.name, doctor_path(@appointment.doctor)%> on <%= @appointment.appointment_datetime.strftime("%B %-d, %Y at %k:%M") %></p>
