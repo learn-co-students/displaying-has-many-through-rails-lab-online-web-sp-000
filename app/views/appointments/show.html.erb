@@ -1,0 +1,7 @@
+Doctor: <%= link_to  @appointment.doctor.name, doctor_path(@appointment.doctor) %><br />
+Patient: <%= link_to  @appointment.patient.name, patient_path(@appointment.patient) %><br />
+
+Date: <%= @appointment.appointment_datetime.strftime("%B %d, %Y") %><br />
+<!-- SQL datetime columns translate to Time Ruby objects -->
+
+Time: <%= @appointment.appointment_datetime.strftime("%k:%M") %><br />
