@@ -2,8 +2,7 @@
 <ul>
 <% @patient.appointments.each do |appt| %>
   <li>
-    <p>Date: <%= appt.date %></p>
-    <p>Time: <%= appt.time %></p>
+    <p><%= appt.appointment_datetime.to_formatted_s(:long).split(' ')[0...-1].join(' ') + " at " + appt.appointment_datetime.to_formatted_s(:long).split.pop %></p>
     <p>Doctor: <%= link_to appt.doctor.name, doctor_path(appt.doctor) %></p>
 <% end %>
 </ul>

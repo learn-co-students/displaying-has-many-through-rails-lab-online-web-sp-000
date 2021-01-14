@@ -1,5 +1,4 @@
 <h1> Appointment %> </h1>
-<p>Date: <%= @appointment.date %></p>
-<p>Time: <%= @appointment.time %></p>
-<p>Doctor: <%= @appointment.doctor %></p>
-<p>Patient: <%= @appointment.patient %></p>
+<p><%= @appointment.appointment_datetime.to_formatted_s(:long).split(' ')[0...-1].join(' ') + " at " + @appointment.appointment_datetime.to_formatted_s(:long).split.pop %></p>
+<p>Doctor: <%= link_to @appointment.doctor.name, doctor_path(@appointment.doctor) %></p>
+<p>Patient: <%= link_to @appointment.patient.name, patient_path(@appointment.patient) %></p>
