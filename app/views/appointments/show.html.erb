@@ -1,0 +1,5 @@
+<h1><%=Appointment.convert_month(@appointment.appointment_datetime.month)%> <%=@appointment.appointment_datetime.day%>, <%=@appointment.appointment_datetime.year%> at <%=@appointment.appointment_datetime.hour%>:<%=Appointment.convert_minute(@appointment.appointment_datetime.min)%> <%=link_to @appointment.doctor.name, doctor_path(@appointment.doctor)%>, <%=link_to @appointment.patient.name, patient_path(@appointment.patient)%> </h1>
+
+<%=@appointment.appointment_datetime.hour%>
+<%=@appointment.appointment_datetime.min%>
+
