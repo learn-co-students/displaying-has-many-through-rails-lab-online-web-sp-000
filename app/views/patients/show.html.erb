@@ -1,0 +1,6 @@
+<h1><%=@patient.name%>, <%=@patient.age%></h1>
+<%@patient.appointments.all.each do |a|%>
+<ul>
+<li><%=Appointment.convert_month(a.appointment_datetime.month)%> <%=a.appointment_datetime.day%>, <%=a.appointment_datetime.year%> at <%=a.appointment_datetime.hour%>:<%=Appointment.convert_minute(a.appointment_datetime.min)%>, <%=link_to a.doctor.name, doctor_path(a.doctor)%></li>
+</ul>
+<%end%>
