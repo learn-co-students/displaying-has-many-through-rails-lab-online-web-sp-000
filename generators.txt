@@ -1,0 +1,3 @@
+rails g resource Doctor name:string --no-test-framework
+rails g resource Patient name:string --no-test-framework
+rails g resource Appointment doctor_id:integer patient_id:integer appointment_datetime:DateTime --no-test-framework
