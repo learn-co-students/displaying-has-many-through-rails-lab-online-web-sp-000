@@ -1,0 +1,19 @@
+Doctor
+    has_many :appointments
+    has_many :patients, through: :appointment
+
+    name
+    department
+
+Appointment
+    belongs_to :doctor
+    belongs_to :patient
+
+    appointment_datetime ... format is this ... (January 12, 2016 at 3:00)
+
+Patient
+    has_many :appointments
+    has_many :doctors, through: appointment
+
+    name
+    age
