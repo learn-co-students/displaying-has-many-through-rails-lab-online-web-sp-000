@@ -1,0 +1,4 @@
+<%= @patient.name %><br>
+<% @patient.appointments.each do |appointment| %>
+    <% @patient_doctor = @patient.doctors.find(appointment.doctor_id) %>
+<% end %>
