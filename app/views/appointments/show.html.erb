@@ -1,0 +1,3 @@
+<p><%= @appointment.plain_english %></p>
+<p><%= link_to @appointment.doctor.name, doctor_path(@appointment.doctor_id) %></p>
+<p><%= link_to @appointment.patient.name, patient_path(@appointment.patient_id) %></p>
