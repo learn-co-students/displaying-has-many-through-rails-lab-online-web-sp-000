@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "doctors", type: :feature do
+describe "doctors", type: :feature do 
   before do
     @meredith = Doctor.create({name: "Meredith Grey", department: "Internal Medicine"})
     @bart = Patient.create(name: "Bart Simpson", age:10 )
