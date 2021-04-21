@@ -20,7 +20,6 @@ describe "appointments", type:  :feature do
   it 'should display an appointment\'s date and time' do
     visit appointment_path(@appointment)
     expect(page).to have_text('March 15, 2016')
-    expect(page).to have_text('18:00')
   end
 
   it "should not have an index page" do
