@@ -1,3 +1,5 @@
 <%= link_to @appointment.doctor.name, doctor_path(@appointment.doctor) %><br>
 
 <%= link_to @appointment.patient.name, patient_path(@appointment.patient) %>
+
+<%= @appointment.date_to_string %>
