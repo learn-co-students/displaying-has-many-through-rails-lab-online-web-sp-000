@@ -1,0 +1,21 @@
+Doctor
+    name
+    department
+    has_many appointments
+    has_many :patients through :appointments    
+
+
+Patient
+    name
+    age
+    has_many appointments
+    has_many :doctors through :appointments   
+
+
+
+Appointment
+    appointment_datetime
+    belongs_to :doctor 
+    belongs_to :patient 
+
+
